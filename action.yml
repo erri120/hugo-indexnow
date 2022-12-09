@@ -1,0 +1,25 @@
+name: "Hugo IndexNow"
+description: "Uses IndexNow and GitHub Indexing API to tell search engines your site was updated."
+author: "erri120"
+inputs:
+  siteURL:
+    description: "URL of your site: www.example.com"
+    required: true
+  siteDirectory:
+    description: "Path to the directory of the Hugo site"
+    required: false
+
+  key:
+    description: "Your key"
+    required: true
+  keyLocation:
+    description: "Optional key location"
+    required: false
+
+  endpoints:
+    description: "List of endpoints to use"
+    required: true
+
+runs:
+  using: "node16"
+  main: "dist/index.js"

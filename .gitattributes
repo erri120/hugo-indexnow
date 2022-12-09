@@ -1,0 +1,32 @@
+# Auto detect text files and perform LF normalization
+*          text=auto
+
+# Source code
+*.js              text
+*.ts              text eol=tf
+
+# Documents
+*.md              text diff=markdown
+LICENSE           text
+
+# Configs
+.gitattributes    text
+.editorconfig     text
+*.lock            text -diff
+package.json      text eol=lf
+package-lock.json text eol=lf -diff
+.prettierrc       text
+yarn.lock         text -diff
+*.yaml            text
+*.yml             text
+
+# Ignore files (like .npmignore or .gitignore)
+*.*ignore         text
+
+# Text files where line endings should be preserved
+*.patch    -text
+
+# Exclude files from exporting
+.gitattributes export-ignore
+.gitignore     export-ignore
+.gitkeep       export-ignore
